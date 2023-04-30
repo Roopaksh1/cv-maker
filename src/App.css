@@ -1,0 +1,22 @@
+:root {
+  font-size: 62.5%;
+  --header-background-color: #fb8500;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: var(--header-background-color);
+  text-align: center;
+  padding: 2rem;
+  font-size: 5rem;
+  letter-spacing: 2px;
+  font-family: monospace;
+  margin-bottom: 2rem;
+}
+
+/*-------- FORM --------*/
