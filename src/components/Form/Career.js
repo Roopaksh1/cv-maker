@@ -5,27 +5,27 @@ export default class Career extends React.Component {
     return (
       <div className="form-career">
         <p className="input-wrapper">
-          <input id="job" placeholder="Job Title" />
+          <input className="job-inp" placeholder="Job Title" />
           <label className="job">Job Title</label>
         </p>
         <p className="input-wrapper">
-          <input id="company" placeholder="Company" />
+          <input className="company-inp" placeholder="Company" />
           <label className="company">Company</label>
         </p>
         <p className="input-wrapper">
-          <input id="" placeholder="Professional Title" />
+          <input className="title-inp" placeholder="Professional Title" />
           <label className="title">Professional Title</label>
         </p>
         <p className="input-wrapper">
-          <input type='number' step={1} min={1900} max={2099} id="from" placeholder="From" />
+          <input type='number' step={1} min={1900} max={2099} className="from-inp" placeholder="From" />
           <label className="from">From</label>
         </p>
         <p className="input-wrapper">
-          <input type='number' step={1} min={1900} max={2099} id="to" placeholder="To" />
+          <input type='number' step={1} min={1900} max={2099} className="to-inp" placeholder="To" />
           <label className="from">To</label>
         </p>
         <p className="input-wrapper">
-          <textarea id="desc" placeholder="Description"></textarea>
+          <textarea className="desc-inp" placeholder="Description"></textarea>
           <label className="desc">Description</label>
         </p>
       </div>

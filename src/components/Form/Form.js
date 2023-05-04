@@ -1,6 +1,7 @@
 import React from "react";
 import Personal from "./Personal";
 import Career from "./Career";
+import Education from "./Education";
 
 export default class Form extends React.Component{
   render () {
@@ -13,6 +14,10 @@ export default class Form extends React.Component{
         <fieldset>
           <legend>Career</legend>
           <Career />
+        </fieldset>
+        <fieldset>
+          <legend>Education</legend>
+          <Education />
         </fieldset>
       </form>
     )
