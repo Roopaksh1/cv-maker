@@ -13,10 +13,6 @@
   box-sizing: border-box;
 }
 
-#root {
-  position: relative;
-}
-
 .header {
   background-color: var(--header-background-color);
   text-align: center;
@@ -41,10 +37,6 @@
   padding: 1rem;
   color: white;
   font-size: 1.5rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   letter-spacing: 2px;
 }
 
@@ -59,7 +51,7 @@ a {
   width: min(65vw, 80rem);
   background-color: var(--form-background-color);
   padding: 2rem;
-  box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3)  ;
+  box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -80,10 +72,10 @@ input {
 }
 
 input:focus {
-  outline: 2px solid black;
+  outline: 1px solid black;
 }
 
-.form-personal {
+.form-personal, .form-career {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
@@ -103,7 +95,8 @@ label {
   top: -1.3em;
 }
 
-input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label {
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
   opacity: 1;
 }
 
@@ -118,4 +111,3 @@ input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label 
   height: 10rem;
   font-size: 1.6rem;
 }
-
