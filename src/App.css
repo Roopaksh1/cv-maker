@@ -2,12 +2,19 @@
   font-size: 62.5%;
   --header-background-color: #fb8500;
   --footer-background-color: black;
+  --form-background-color: #edede9;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+}
+
+#root {
+  position: relative;
 }
 
 .header {
@@ -20,6 +27,14 @@
   margin-bottom: 2rem;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
 .footer {
   background-color: var(--footer-background-color);
   text-align: center;
@@ -28,7 +43,8 @@
   font-size: 1.5rem;
   position: absolute;
   bottom: 0;
-  width: 100vw;
+  left: 0;
+  right: 0;
   letter-spacing: 2px;
 }
 
@@ -38,3 +54,68 @@ a {
 }
 
 /*-------- FORM --------*/
+
+.form {
+  width: min(65vw, 80rem);
+  background-color: var(--form-background-color);
+  padding: 2rem;
+  box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3)  ;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+fieldset {
+  padding: 2rem;
+  border: 1px solid black;
+}
+
+legend {
+  font-size: 2.5rem;
+}
+
+input {
+  padding: 0.3rem;
+  font-size: 1.5rem;
+}
+
+input:focus {
+  outline: 2px solid black;
+}
+
+.form-personal {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+label {
+  opacity: 0;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: -1.3em;
+}
+
+input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label {
+  opacity: 1;
+}
+
+.photo {
+  position: static;
+  opacity: 1;
+}
+
+#desc {
+  resize: none;
+  padding: 1rem;
+  height: 10rem;
+  font-size: 1.6rem;
+}
+
