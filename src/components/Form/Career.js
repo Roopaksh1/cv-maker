@@ -15,10 +15,6 @@ export default class Career extends React.Component {
           <label className="company">Company</label>
         </p>
         <p className="input-wrapper">
-          <input className="title-inp" placeholder="Professional Title" />
-          <label className="title">Professional Title</label>
-        </p>
-        <p className="input-wrapper">
           <input
             type="number"
             step={1}
