@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
+import Button from '../../shared/Button';
 
-export default class Education extends React.Component{
-  render () {
+export default class Education extends React.Component {
+  render() {
+    const { onDelete, index } = this.props;
     return (
       <div className="form-education">
         <p className="input-wrapper">
@@ -17,14 +19,29 @@ export default class Education extends React.Component{
           <label className="subject-inp">Subject</label>
         </p>
         <p className="input-wrapper">
-          <input type='number' step={1} min={1900} max={2099} className="from-inp" placeholder="From" />
+          <input
+            type="number"
+            step={1}
+            min={1900}
+            max={2099}
+            className="from-inp"
+            placeholder="From"
+          />
           <label className="from">From</label>
         </p>
         <p className="input-wrapper">
-          <input type='number' step={1} min={1900} max={2099} className="to-inp" placeholder="To" />
+          <input
+            type="number"
+            step={1}
+            min={1900}
+            max={2099}
+            className="to-inp"
+            placeholder="To"
+          />
           <label className="from">To</label>
         </p>
+        <Button onDelete={onDelete} index={index} />
       </div>
-    )
+    );
   }
 }

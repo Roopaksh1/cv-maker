@@ -3,6 +3,9 @@
   --header-background-color: #fb8500;
   --footer-background-color: black;
   --form-background-color: #edede9;
+  --form-btn-color: #06d6a0;
+  --form-btn-hover-color: #83d483;
+  --form-btn-active-color: #0cb0a9;
 }
 
 *,
@@ -60,6 +63,8 @@ a {
 fieldset {
   padding: 2rem;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 legend {
@@ -75,10 +80,14 @@ input:focus {
   outline: 1px solid black;
 }
 
-.form-personal, .form-career, .form-education, .form-skills {
+.form-personal,
+.form-career,
+.form-education,
+.form-skills {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
+  margin: 2rem;
 }
 
 .input-wrapper {
@@ -110,4 +119,28 @@ textarea:not(:placeholder-shown) + label {
   padding: 1rem;
   height: 10rem;
   font-size: 1.6rem;
+}
+
+.add-btn,
+.delete-btn {
+  border: none;
+  background-color: var(--form-btn-color);
+  padding: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 1rem 2rem;
+}
+
+.delete-btn {
+  margin: 0;
+}
+
+.add-btn:hover,
+.delete-btn:hover {
+  background-color: var(--form-btn-hover-color);
+}
+
+.add-btn:active,
+.delete-btn:active {
+  background-color: var(--form-btn-active-color);
 }
