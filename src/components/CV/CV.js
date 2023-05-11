@@ -7,21 +7,22 @@ import Skills from "./Skills";
 
 export default class CV extends React.Component {
   render() {
+    const {personal, education, career, skills} = this.props.info;
     return (
       <div className="cv-wrapper">
         <div className="cv-display">
-          <Personal />
-          <div class="cv-grid">
-            <div class="cv-career-wrapper">
+          <Personal personal={personal}/>
+          <div className="cv-grid">
+            <div className="cv-career-wrapper">
               <h2>Career</h2>
               <Career />
             </div>
-            <Contact />
-            <div class="cv-education-wrapper">
+            <Contact contact={personal}/>
+            <div className="cv-education-wrapper">
               <h2>Education</h2>
               <Education />
             </div>
-            <div class="cv-skills-wrapper">
+            <div className="cv-skills-wrapper">
               <h2>Skills</h2>
               <Skills />
             </div>

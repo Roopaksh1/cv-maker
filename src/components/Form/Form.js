@@ -94,11 +94,12 @@ export default class Form extends React.Component {
   };
 
   render() {
+    const {onChangePersonal, onChangeEducation, onChangeCareer, onChangeSkills} = this.props;
     return (
       <form className="form">
         <fieldset>
           <legend>Personal Details</legend>
-          <Personal />
+          <Personal onChangePersonal={onChangePersonal}/>
         </fieldset>
         <fieldset>
           <legend>Career</legend>

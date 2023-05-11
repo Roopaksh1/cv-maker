@@ -2,19 +2,20 @@ import React from 'react';
 
 export default class Contact extends React.Component {
   render() {
+    const {address='Address', phone='1234567890', email='abc@gmail.com'} = this.props.contact;
     return (
       <div className="cv-contact">
         <div className="cv-address">
-          <i class="fa-solid fa-location-dot"></i>
-          <p>Address</p>
+          <i className="fa-solid fa-location-dot"></i>
+          <p>{address}</p>
         </div>
         <div className="cv-phone">
-          <i class="fa-solid fa-phone"></i>
-          <p>1234567890</p>
+          <i className="fa-solid fa-phone"></i>
+          <p>{phone}</p>
         </div>
         <div className="cv-email">
-          <i class="fa-solid fa-envelope"></i>
-          <p>abc@gmail.com</p>
+          <i className="fa-solid fa-envelope"></i>
+          <p>{email}</p>
         </div>
       </div>
     );

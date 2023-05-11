@@ -4,7 +4,7 @@ export default class Education extends React.Component {
   render() {
     return (
       <div className="cv-education">
-        <div class="university-info">
+        <div className="university-info">
           <p className="cv-university">University</p>
           <p className="cv-course">Course</p>
           <p className="cv-subject">Subject</p>
