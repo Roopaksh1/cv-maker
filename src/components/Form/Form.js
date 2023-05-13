@@ -6,8 +6,8 @@ import Skills from './Skills';
 import Button from '../../shared/Button';
 
 export default class Form extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.addSkill = this.addSkill.bind(this);
     this.addCareer = this.addCareer.bind(this);
     this.addEducation = this.addEducation.bind(this);
@@ -15,46 +15,91 @@ export default class Form extends React.Component {
     this.deleteEducation = this.deleteEducation.bind(this);
     this.deleteCareer = this.deleteCareer.bind(this);
 
+    const { onChangeEducation, onChangeCareer, onChangeSkills } = props;
+
     this.state = {
-      skills: [<Skills onDelete={this.deleteSkill} key={0} index={0} />],
-      education: [
-        <Education onDelete={this.deleteEducation} key={0} index={0} />,
+      skills: [
+        <Skills
+          onDelete={this.deleteSkill}
+          key={0}
+          index={0}
+          onChangeSkills={onChangeSkills}
+        />,
       ],
-      career: [<Career onDelete={this.deleteCareer} key={0} index={0} />],
+      education: [
+        <Education
+          onDelete={this.deleteEducation}
+          key={0}
+          index={0}
+          onChangeEducation={onChangeEducation}
+        />,
+      ],
+      career: [
+        <Career
+          onDelete={this.deleteCareer}
+          key={0}
+          index={0}
+          onChangeCareer={onChangeCareer}
+        />,
+      ],
     };
   }
 
   addSkill = () => {
     let arr = [...this.state.skills];
-    arr.push(<Skills onDelete={this.deleteSkill} />);
+    arr.push(<Skills />);
     arr = arr.map((d, i) => {
-      return <Skills onDelete={this.deleteSkill} key={i} index={i} />;
+      return (
+        <Skills
+          onDelete={this.deleteSkill}
+          key={i}
+          index={i}
+          onChangeSkills={this.props.onChangeSkills}
+        />
+      );
     });
     this.setState({
       skills: arr,
     });
+    this.props.onAddSkills();
   };
 
   addEducation = () => {
     let arr = [...this.state.education];
-    arr.push(<Education onDelete={this.deleteEducation} />);
+    arr.push(<Education />);
     arr = arr.map((d, i) => {
-      return <Education onDelete={this.deleteEducation} key={i} index={i} />;
+      return (
+        <Education
+          onDelete={this.deleteEducation}
+          key={i}
+          index={i}
+          onChangeEducation={this.props.onChangeEducation}
+        />
+      );
     });
     this.setState({
       education: arr,
     });
+    this.props.onAddEducation();
   };
 
   addCareer = () => {
     let arr = [...this.state.career];
-    arr.push(<Career onDelete={this.deleteCareer} />);
+    arr.push(<Career />);
     arr = arr.map((d, i) => {
-      return <Career onDelete={this.deleteCareer} key={i} index={i} />;
+      return (
+        <Career
+          onDelete={this.deleteCareer}
+          key={i}
+          index={i}
+          onChangeCareer={this.props.onChangeCareer}
+        />
+      );
     });
     this.setState({
       career: arr,
     });
+    this.props.onAddCareer();
   };
 
   deleteSkill = (i) => {
@@ -62,11 +107,19 @@ export default class Form extends React.Component {
     let arr = [...this.state.skills];
     arr = arr.filter((d, i) => i !== index);
     arr = arr.map((d, i) => {
-      return <Skills onDelete={this.deleteSkill} key={i} index={i} />;
+      return (
+        <Skills
+          onDelete={this.deleteSkill}
+          key={i}
+          index={i}
+          onChangeSkills={this.props.onChangeSkills}
+        />
+      );
     });
     this.setState({
       skills: arr,
     });
+    this.props.onDeleteSkills(index);
   };
 
   deleteEducation = (i) => {
@@ -74,11 +127,19 @@ export default class Form extends React.Component {
     let arr = [...this.state.education];
     arr = arr.filter((d, i) => i !== index);
     arr = arr.map((d, i) => {
-      return <Education onDelete={this.deleteEducation} key={i} index={i} />;
+      return (
+        <Education
+          onDelete={this.deleteEducation}
+          key={i}
+          index={i}
+          onChangeEducation={this.props.onChangeEducation}
+        />
+      );
     });
     this.setState({
       education: arr,
     });
+    this.props.onDeleteEducation(index);
   };
 
   deleteCareer = (i) => {
@@ -86,20 +147,28 @@ export default class Form extends React.Component {
     let arr = [...this.state.career];
     arr = arr.filter((d, i) => i !== index);
     arr = arr.map((d, i) => {
-      return <Career onDelete={this.deleteCareer} key={i} index={i} />;
+      return (
+        <Career
+          onDelete={this.deleteCareer}
+          key={i}
+          index={i}
+          onChangeCareer={this.props.onChangeCareer}
+        />
+      );
     });
     this.setState({
       career: arr,
     });
+    this.props.onDeleteCareer(index);
   };
 
   render() {
-    const {onChangePersonal, onChangeEducation, onChangeCareer, onChangeSkills} = this.props;
+    const { onChangePersonal } = this.props;
     return (
       <form className="form">
         <fieldset>
           <legend>Personal Details</legend>
-          <Personal onChangePersonal={onChangePersonal}/>
+          <Personal onChangePersonal={onChangePersonal} />
         </fieldset>
         <fieldset>
           <legend>Career</legend>

@@ -2,11 +2,10 @@ import React from "react";
 
 export default class Skills extends React.Component {
   render() {
+    const { skill='Skill' } = this.props.skills
     return (
       <div className="cv-skills">
-        <p>Skill-1</p>
-        <p>Skill-2</p>
-        <p>Skill-3</p>
+        <p>{skill}</p>
       </div>
     )
   }
