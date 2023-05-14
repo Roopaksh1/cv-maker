@@ -2,7 +2,13 @@ import React from 'react';
 
 export default class Education extends React.Component {
   render() {
-    const {university='University', course='Course', subject='Subject', to='Present', from='2022'} = this.props.education;
+    const {
+      university = 'University',
+      course = 'Course',
+      subject = 'Subject',
+      to = 'Present',
+      from = '2022',
+    } = this.props.education;
     return (
       <div className="cv-education">
         <div className="university-info">

@@ -25,9 +25,7 @@ export default class Main extends React.Component {
       skills: [0],
     };
     this.careerArr = [<Career key={0} />];
-    this.educationArr = [
-      <Education key={0} />,
-    ];
+    this.educationArr = [<Education key={0} />];
     this.skillsArr = [<Skills key={0} />];
   }
 
@@ -37,7 +35,7 @@ export default class Main extends React.Component {
     arr.push(0);
     this.setState({
       career: arr,
-    })
+    });
   };
 
   onAddEducation = () => {
@@ -46,7 +44,7 @@ export default class Main extends React.Component {
     arr.push(0);
     this.setState({
       education: arr,
-    })
+    });
   };
 
   onAddSkills = () => {
@@ -55,35 +53,35 @@ export default class Main extends React.Component {
     arr.push(0);
     this.setState({
       skills: arr,
-    })
+    });
   };
 
   onDeleteCareer = (index) => {
-    this.careerArr = this.careerArr.filter((d, i) => i!==index);
+    this.careerArr = this.careerArr.filter((d, i) => i !== index);
     let arr = this.state.career;
-    arr = arr.filter((d, i) => i!==index)
+    arr = arr.filter((d, i) => i !== index);
     this.setState({
       career: arr,
-    })
-  }
+    });
+  };
 
   onDeleteEducation = (index) => {
-    this.educationArr = this.educationArr.filter((d, i) => i!==index);
+    this.educationArr = this.educationArr.filter((d, i) => i !== index);
     let arr = this.state.education;
-    arr = arr.filter((d, i) => i!==index)
+    arr = arr.filter((d, i) => i !== index);
     this.setState({
       education: arr,
-    })
-  }
+    });
+  };
 
   onDeleteSkills = (index) => {
-    this.skillsArr = this.skillsArr.filter((d, i) => i!==index);
+    this.skillsArr = this.skillsArr.filter((d, i) => i !== index);
     let arr = this.state.skills;
-    arr = arr.filter((d, i) => i!==index)
+    arr = arr.filter((d, i) => i !== index);
     this.setState({
       skills: arr,
-    })
-  }
+    });
+  };
 
   onChangePersonal = (e) => {
     const { name, value } = e.target;
@@ -97,7 +95,7 @@ export default class Main extends React.Component {
   onChangeCareer = (e, index) => {
     const { name, value } = e.target;
     let arr = this.state.career;
-    arr[index] = {...arr[index], [name]: value,};
+    arr[index] = { ...arr[index], [name]: value };
     this.setState({
       career: arr,
     });
@@ -105,7 +103,7 @@ export default class Main extends React.Component {
   onChangeEducation = (e, index) => {
     const { name, value } = e.target;
     let arr = this.state.education;
-    arr[index] = {...arr[index], [name]: value,};
+    arr[index] = { ...arr[index], [name]: value };
     this.setState({
       education: arr,
     });
@@ -113,7 +111,7 @@ export default class Main extends React.Component {
   onChangeSkills = (e, index) => {
     const { name, value } = e.target;
     let arr = this.state.skills;
-    arr[index] = {...arr[index], [name]: value,};
+    arr[index] = { ...arr[index], [name]: value };
     this.setState({
       skills: arr,
     });

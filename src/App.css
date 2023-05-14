@@ -198,7 +198,8 @@ textarea:not(:placeholder-shown) + label {
   font-size: 2rem;
 }
 
-.cv-desc, .job-desc {
+.cv-desc,
+.job-desc {
   font-size: 1.5rem;
 }
 
@@ -242,13 +243,16 @@ h2 {
   font-size: 1.5rem;
 }
 
-.cv-address, .cv-phone, .cv-email {
+.cv-address,
+.cv-phone,
+.cv-email {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
-.cv-education-wrapper, .cv-skills-wrapper {
+.cv-education-wrapper,
+.cv-skills-wrapper {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -281,7 +285,8 @@ h2 {
   gap: 1rem;
 }
 
-.to, .from {
+.to,
+.from {
   font-weight: bolder;
   text-align: right;
 }

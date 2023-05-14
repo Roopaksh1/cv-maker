@@ -6,24 +6,19 @@ import Skills from './Skills';
 import Education from './Education';
 
 export default class CV extends React.Component {
-  
   mapCareer = (arr, info) => {
-    return arr.map((d, i) => (
-      <Career career={info.career[i]} key={i} />
-    ));
-  }
+    return arr.map((d, i) => <Career career={info.career[i]} key={i} />);
+  };
 
   mapEducation = (arr, info) => {
     return arr.map((d, i) => (
       <Education education={info.education[i]} key={i} />
     ));
-  }
+  };
 
   mapSkills = (arr, info) => {
-    return arr.map((d, i) => (
-      <Skills skills={info.skills[i]} key={i} />
-    ));
-  }
+    return arr.map((d, i) => <Skills skills={info.skills[i]} key={i} />);
+  };
 
   render() {
     const { educationArr, careerArr, skillsArr, info } = this.props;

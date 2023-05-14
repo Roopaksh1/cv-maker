@@ -7,21 +7,36 @@ export default class Education extends React.Component {
     return (
       <div className="form-education">
         <p className="input-wrapper">
-          <input name='university' className="university-inp" placeholder="University" onChange={(e) => onChangeEducation(e, index)} />
+          <input
+            name="university"
+            className="university-inp"
+            placeholder="University"
+            onChange={(e) => onChangeEducation(e, index)}
+          />
           <label className="university">University</label>
         </p>
         <p className="input-wrapper">
-          <input name='course' className="course-inp" placeholder="Course" onChange={(e) => onChangeEducation(e, index)} />
+          <input
+            name="course"
+            className="course-inp"
+            placeholder="Course"
+            onChange={(e) => onChangeEducation(e, index)}
+          />
           <label className="course">Course</label>
         </p>
         <p className="input-wrapper">
-          <input name='subject' className="subject-inp" placeholder="Subject" onChange={(e) => onChangeEducation(e, index)} />
+          <input
+            name="subject"
+            className="subject-inp"
+            placeholder="Subject"
+            onChange={(e) => onChangeEducation(e, index)}
+          />
           <label className="subject-inp">Subject</label>
         </p>
         <p className="input-wrapper">
           <input
             type="number"
-            name='from'
+            name="from"
             step={1}
             min={1900}
             max={2099}
@@ -34,7 +49,7 @@ export default class Education extends React.Component {
         <p className="input-wrapper">
           <input
             type="number"
-            name='to'
+            name="to"
             step={1}
             min={1900}
             max={2099}

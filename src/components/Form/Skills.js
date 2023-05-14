@@ -7,7 +7,12 @@ export default class Skills extends React.Component {
     return (
       <div className="form-skills">
         <p className="input-wrapper">
-          <input name='skill' className="skill-inp" placeholder="Skill" onInput={(e) => onChangeSkills(e, index)}/>
+          <input
+            name="skill"
+            className="skill-inp"
+            placeholder="Skill"
+            onInput={(e) => onChangeSkills(e, index)}
+          />
           <label className="skill">Skill</label>
         </p>
         <Button onDelete={onDelete} index={index} />

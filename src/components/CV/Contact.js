@@ -2,7 +2,11 @@ import React from 'react';
 
 export default class Contact extends React.Component {
   render() {
-    const {address='Address', phone='1234567890', email='abc@gmail.com'} = this.props.contact;
+    const {
+      address = 'Address',
+      phone = '1234567890',
+      email = 'abc@gmail.com',
+    } = this.props.contact;
     return (
       <div className="cv-contact">
         <div className="cv-address">
