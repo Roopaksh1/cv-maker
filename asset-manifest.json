@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/cv-maker/static/css/main.575794cd.css",
+    "main.js": "/cv-maker/static/js/main.8bd86043.js",
+    "static/media/default-avatar-profile.jpg": "/cv-maker/static/media/default-avatar-profile.ae67bd1e928bce4e3f48.jpg",
+    "index.html": "/cv-maker/index.html",
+    "main.575794cd.css.map": "/cv-maker/static/css/main.575794cd.css.map",
+    "main.8bd86043.js.map": "/cv-maker/static/js/main.8bd86043.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.575794cd.css",
+    "static/js/main.8bd86043.js"
+  ]
+}
