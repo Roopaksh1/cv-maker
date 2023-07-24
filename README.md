@@ -6,10 +6,6 @@
 
 ![image](https://github.com/Roopaksh1/cv-maker/assets/72032743/94ffffce-9bfd-412b-a437-2c23c6400299)
 
-#### Features I Am Working On
-
-- To print cv as pdf
-
 ## Installation
 ```
 git clone https://github.com/Roopaksh1/cv-maker.git
