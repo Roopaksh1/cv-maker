@@ -4,6 +4,7 @@ import CV from './CV/CV';
 import Career from './CV/Career';
 import Education from './CV/Education';
 import Skills from './CV/Skills';
+import { jsPDF } from "jspdf";
 
 export default class Main extends React.Component {
   constructor() {
@@ -131,6 +132,18 @@ export default class Main extends React.Component {
     };
   };
 
+  generatePDF = () => {
+    const doc = new jsPDF();
+    const element = document.querySelector('.cv-wrapper');
+    doc.html(element, {
+      callback: function(doc) {
+        doc.save('CV.pdf');
+      },x: 6,
+      y: 8,
+      html2canvas: { scale: 0.25 },
+    })
+  }
+
   render() {
     return (
       <div className="main">
@@ -146,6 +159,7 @@ export default class Main extends React.Component {
           onDeleteEducation={this.onDeleteEducation}
           onDeleteSkills={this.onDeleteSkills}
         />
+        <button className='pdf-button' onClick={this.generatePDF}>Download As PDF</button>
         <CV
           info={this.state}
           personalArr={this.personalArr}
